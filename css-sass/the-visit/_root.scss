@@ -1,0 +1,91 @@
+#root {
+	.bg {
+		width: 100%;
+		height: 100%;
+		
+		background: url(../img/css/mobile/root-bg.jpg);
+		background-size: cover;
+		background-position: center bottom;
+		position: absolute;
+		
+		
+		@media screen and (min-width: $desktop-min-width){
+			background: url(../img/css/desktop/root-bg.jpg);
+			background-size: cover;
+			background-position: center bottom;
+		}
+	}
+	
+	.root-title {
+		@include aspect-ratio(390, 174);
+		@include vertical-align;
+		width: 60%;
+		max-width: 390px;
+		background: url(../img/css/root-title.png);
+		background-size: cover;
+		position: relative;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+	
+	.root-swing {
+		background: url(../img/css/desktop/swing.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		width: 148px;
+		height: 584px;
+		position: absolute;
+		
+		left: 50%;
+		
+		animation: swing 5s infinite;
+		-ms-animation: swing 5s infinite;
+		-moz-animation: swing 5s infinite;
+		-webkit-animation: swing 5s infinite;
+		
+		top: 0;
+		 
+		transform-origin: top;
+		-webkit-transform-origin: top;
+		-moz-transform-origin: top;
+		-ms-transform-origin: top;
+		
+		 -webkit-transition-timing-function: SineEaseInOut; /* Safari and Chrome */
+		 -ms-transition-timing-function: SineEaseInOut;
+		 -moz-transition-timing-function: SineEaseInOut;
+		 transition-timing-function: SineEaseInOut;
+		 
+		 @media screen and (min-width: $desktop-min-width){
+			top: auto;
+		 }
+		
+		@keyframes swing {
+			0% {
+				-ms-transform: rotate(2deg); /* IE 9 */
+				-webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+				transform: rotate(2deg);
+			}
+			
+		
+			50% {
+				-ms-transform: rotate(-2deg); /* IE 9 */
+				-webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+				transform: rotate(-2deg);
+			}
+			
+			100% {
+				-ms-transform: rotate(2deg); /* IE 9 */
+				-webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+				transform: rotate(2deg);
+			}
+
+			
+		}
+		
+	}
+	
+	
+	
+}
+
